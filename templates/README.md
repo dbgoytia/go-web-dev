@@ -1,7 +1,10 @@
 A Website tempalte is a predesigned resource that shows how the structure for a comprehensive layout and display features of any website will look. In the case of Go, in the standard library we have two main packages:
 
 * text/templates
+    https://pkg.go.dev/text/template
 * html/templates
+    https://pkg.go.dev/html/template
+
 
 They are almost the same, except that html/templates has some extra built-in functionally for html websites.
 
