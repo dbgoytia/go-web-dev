@@ -1,0 +1,1 @@
+With structs you get access to the fields of the structs using the same syntax. You'll see that we're parsing the aggregate structure in the template.
