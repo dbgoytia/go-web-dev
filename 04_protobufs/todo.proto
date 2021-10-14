@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package todo;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/protocolbuffers/protobuf/examples/go/tutorialpb";
+
+message Task {
+    string title = 1;
+    int32 id = 2; // Unique ID for this person
+    string status = 4;
+
+    enum TaskType {
+        WORK = 0;
+        OSS = 1;
+        TRAINING = 2;
+    }
+
+    message TaskDetails {
+        string description = 1;
+        TaskType type = 2;
+    }
+
+    google.protobuf.Timestamp last_updated = 5;
+}
+
+message Todo {
+    repeated Task task = 1;
+}
