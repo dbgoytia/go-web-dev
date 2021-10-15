@@ -15,7 +15,21 @@ Generated class has already getters and setters readily available for us.
 
 It is a command line app for managing address book files, encoded using protobufs. The command *add_person_go*, will add a new entry to the file, and *list_people_go* parses the data file and prints data to console.
 
-## Protobuf installation
+## To compile this protobuf
+
+```
+make mod
+make protoc
+```
+
+## Testing
+
+```
+make test
+```
+
+
+## Notes around protobuf installation
 
 At the time of doing this, the official docs were followed to install protobuff. Basically, download the compiled bin from https://github.com/protocolbuffers/protobuf, in my case for Ubuntu. Then copy the files to a location availabile in your path. In my case:
 
@@ -34,12 +48,6 @@ drwxr-xr-x 3 root root 4096 Oct 15 16:34 google
 $ echo ${PATH}
 /home/build/.vscode-server/bin/c13f1abb110fc756f9b3a6f16670df9cd9d4cf63/bin:/home/build/anaconda3/bin:/home/build/anaconda3/condabin:/home/build/.vscode-server/bin/c13f1abb110fc756f9b3a6f16670df9cd9d4cf63/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/build/go/bin:/usr/local/go/bin:/home/build/go/bin
 ```
-
-## To compile this protobuf
-
-SRC_DIR=~/go/src/github.com/go-web-dev/04_protobufs/examples
-DST_DIR=~/go/src/
-protoc -I=$SRC_DIR --go_out=$DST_DIR ${SRC_DIR}/todo.proto
 
 ## Details of my running platform
 
