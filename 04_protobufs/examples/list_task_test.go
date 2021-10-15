@@ -13,7 +13,7 @@ func TestWriteTaskWritesTask(t *testing.T){
 
 	// [START] populate proto
 	ta := pb.Task{
-		Id:		0001,
+		Id:		1234,
 		Title: 	"Proto training",
 		Status: "backlog",
 		
@@ -28,10 +28,10 @@ func TestWriteTaskWritesTask(t *testing.T){
 
 	writeTask(buf, &ta)
 	got := buf.String()
-	want := `Task ID: 001
-Name: Proto training
-Status: Backlog
-Training task: Create a sample unit test for todo app.
+	want := `Task ID: 1234
+  Name: Proto training
+  Status: backlog
+  TRAINING task: Create a sample unit test for todo app.
 `
 	if got != want {
 		t.Errorf("writeTask(%s) =>\n\t%q, want %q", ta.String(), got, want)
