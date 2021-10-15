@@ -3,7 +3,7 @@ package tutorial;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/go-web-dev/04_protobufs/examples";
+option go_package = "../tutorial";
 
 message Task {
     string title = 1;

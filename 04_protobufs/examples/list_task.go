@@ -8,7 +8,7 @@ import (
 	"os"
 
 	"github.com/golang/protobuf/proto"
-	pb "github.com/go-web-dev/04_protobufs/examples"
+	pb "github.com/go-web-dev/04_protobufs/tutorial"
 )
 
 func writeTask(w io.Writer, t *pb.Person){
