@@ -3,7 +3,7 @@ package tutorial;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "../tutorial";
+option go_package = "./tutorial";
 
 message Task {
     string title = 1;
