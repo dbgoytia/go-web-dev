@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	pb "github.com/go-web-dev/04_protobufs/tutorialpb"
+	pb "github.com/go-web-dev/04_protobufs/examples"
 )
 
 func TestWriteTaskWritesTask(t *testing.T){
