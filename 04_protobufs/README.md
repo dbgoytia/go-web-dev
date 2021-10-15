@@ -37,10 +37,9 @@ $ echo ${PATH}
 
 ## To compile this protobuf
 
-SRC_DIR=~/go/src/github.com/go-web-dev/04_protobufs/
+SRC_DIR=~/go/src/github.com/go-web-dev/04_protobufs/examples
 DST_DIR=~/go/src/
-protoc -I=$SRC_DIR --go_out=$DST_DIR ./todo.proto
-
+protoc -I=$SRC_DIR --go_out=$DST_DIR ${SRC_DIR}/todo.proto
 
 ## Details of my running platform
 
