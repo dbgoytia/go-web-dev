@@ -1,15 +1,14 @@
 syntax = "proto3";
-
-package todo;
+package tutorial;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/protocolbuffers/protobuf/examples/go/tutorialpb";
+option go_package = "github.com/protocolbuffers/go-web-dev/04_protobufs/tutorialpb";
 
 message Task {
     string title = 1;
     int32 id = 2; // Unique ID for this person
-    string status = 4;
+    string status = 3;
 
     enum TaskType {
         WORK = 0;
@@ -21,6 +20,8 @@ message Task {
         string description = 1;
         TaskType type = 2;
     }
+
+    repeated TaskDetails tasks = 4;
 
     google.protobuf.Timestamp last_updated = 5;
 }
