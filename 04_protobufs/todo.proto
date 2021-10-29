@@ -26,5 +26,5 @@ message Task {
 }
 
 message Todo {
-    repeated Task task = 1;
+    repeated Task task = 1; 
 }
