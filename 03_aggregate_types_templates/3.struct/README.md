@@ -9,3 +9,5 @@ This could be:
     * checking permissions
     * comparison
     * formatting
+
+* All of the previous operations, and many more, can be concatenated using *pipelineing*
