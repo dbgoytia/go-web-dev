@@ -1,4 +1,6 @@
-## Example usage
+## In-memory database
+
+This is an example of how something more complex, like a Redis, memcached or beanstalkd database is based upon.
 
 Run the in-memory database, listening on :8080
 
