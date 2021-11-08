@@ -3,10 +3,17 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"html/template"
 	"log"
 	"net"
 	"strings"
 )
+
+var tpl *template.Template
+
+func init() {
+	tpl = template.Must(template.ParseGlob("tpl.gohtml"))
+}
 
 func main() {
 	li, err := net.Listen("tcp", ":8080")
