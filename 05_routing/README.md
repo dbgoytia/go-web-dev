@@ -23,4 +23,4 @@ ServeHTTP(http.ResponseWriter, req *http.Request)
 ServeMux architecture
 =====================
 
-![Alt text](05_routing/handler_arch.jpg?raw=true "servemux_arch")
+![Arch](./05_routing/handler_arch.jpg?raw=true "servemux_arch")
