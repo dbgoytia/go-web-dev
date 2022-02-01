@@ -10,7 +10,7 @@ development practices, they just point to certain functions.
 Remember
 ========
 
-There are a lot of synonims for webserver, on of them being multiplexer, mux, webserver, etc.
+There are a lot of synonims for webserver, on of them being multiplexer, mux, webserver, servemux, etc.
 
 
 HandlerInterface
@@ -29,6 +29,16 @@ ServeMux architecture
 =====================
 
 Review handler arch for important information.
+
+
+ServeMux
+==============
+For creating a new ServeMux, we can use the *NewServeMux* method, that returns a pointer to a ServeMux.
+```
+func NewServeMux() *ServeMux
+```
+The ServeMux implements the ServeHTTP method, meaning that ServeMux implements the Handler interface.
+The handler is typically nil, in which the DefaultServeMux is used.
 
 
 HandleFunc
