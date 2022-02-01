@@ -10,15 +10,20 @@ development practices, they just point to certain functions.
 Remember
 ========
 
-* There are a lot of synonims for webserver, on of them being multiplexer, mux, webserver, etc.
+There are a lot of synonims for webserver, on of them being multiplexer, mux, webserver, etc.
 
-* A Handler is an interface that knows how to "handle" http requests. That interface has a method named
-*ServeHTTP* with two parameters: an *HTTPResponseWriter* interface, and a pointer to a *Request* struct.
-In other words, anything that has a method called *ServeHTTP* with that signature is a Handler:
+
+HandlerInterface
+===================
 
 ```
 ServeHTTP(http.ResponseWriter, req *http.Request)
 ```
+
+A Handler is an interface that knows how to "handle" http requests. 
+It has a method called *ServeHTTP*, that receives an *HTTPReponseWriter* and a pointer to a *Request* struct.
+In other words, anything that implements a method called *ServeHTTP* with that signature, is a Handler.
+
 
 ServeMux architecture
 =====================
@@ -27,7 +32,7 @@ Review handler arch for important information.
 
 
 HandleFunc
-===========
+==================
 
 ```
 func HandleFunc(pattern string, handler func(ResponseWriter, *Request))
@@ -37,7 +42,7 @@ Basically takes a handler, and a pattern to attach it to the DefaultServeMux.
 
 
 ListenAndServe
-=============
+====================
 
 ```
 func ListenAndServe(addr string, handler Handler) error
@@ -55,3 +60,7 @@ var DefaultServeMux = &defaultServeMux
 ```
 
 It is the default ServeMux used by Serve.
+
+
+Disambiguation between func(ResponseWriter, *Request) vs HnalderFunc
+======================================================================
