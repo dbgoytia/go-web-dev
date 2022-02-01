@@ -39,6 +39,7 @@ func NewServeMux() *ServeMux
 ```
 The ServeMux implements the ServeHTTP method, meaning that ServeMux implements the Handler interface.
 The handler is typically nil, in which the DefaultServeMux is used.
+Because *ListenAndServe* receives a Handler, we can then pass in the *ServeMux* to ListenAndServe.
 
 
 HandleFunc
