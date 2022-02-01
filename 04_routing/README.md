@@ -24,3 +24,35 @@ ServeMux architecture
 =====================
 
 ![Arch](./04_routing/handler_arch.jpg?raw=true "servemux_arch")
+
+
+
+HandleFunc
+===========
+
+```
+func HandleFunc(pattern string, handler func(ResponseWriter, *Request))
+```
+
+Basically takes a handler, and a pattern to attach it to the DefaultServeMux.
+
+
+ListenAndServe
+=============
+
+```
+func ListenAndServe(addr string, handler Handler) error
+```
+
+Listens on the TCP network address and then calls Serve with handler to handle the incoming connections.
+The handler is typically nil, in which the DefaultServeMux is used
+
+
+DefaultServeMux
+================
+
+```
+var DefaultServeMux = &defaultServeMux
+```
+
+It is the default ServeMux used by Serve.
