@@ -48,8 +48,9 @@ ListenAndServe
 func ListenAndServe(addr string, handler Handler) error
 ```
 
+Listen and Serve takes a Handler as an argument.
 Listens on the TCP network address and then calls Serve with handler to handle the incoming connections.
-The handler is typically nil, in which the DefaultServeMux is used
+The handler is typically nil, in which the DefaultServeMux is used.
 
 
 DefaultServeMux
