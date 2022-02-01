@@ -23,8 +23,7 @@ ServeHTTP(http.ResponseWriter, req *http.Request)
 ServeMux architecture
 =====================
 
-![Arch](./04_routing/handler_arch.jpg?raw=true "servemux_arch")
-
+Review handler arch for important information.
 
 
 HandleFunc
