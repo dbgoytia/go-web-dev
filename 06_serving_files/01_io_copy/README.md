@@ -21,7 +21,7 @@ func dog(w http.ResponseWriter, req *http.Request) {
 
 I think the issue here is that in spite we're writing the correct html code for opening up the file, we're actually looking it in the client side, and we should open it up on the server side, so the return of this code is a broken link on the client.
 
-## Why did I think this could be a good approach?
+## Why did I think this could be a good approach?
 
 Because we know the that the *io.WriteString* method takes in an object that implements the writer interface:
 
