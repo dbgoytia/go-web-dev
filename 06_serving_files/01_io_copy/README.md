@@ -31,10 +31,6 @@ func WriteString(w Writer, s string) (n int, err error)
 
 We know that the *http.ResponseWriter* implements the Writer interface. We know this because the *http.ResponseWriter* interface has a Write method that accepts a *[]bytes(str)*, so we should be able to write to that *Writer* (I know..  bare with me) using the io.WriteString method.
 
-```
-
-```
-
 # Correct implementation
 
 ## The File type
