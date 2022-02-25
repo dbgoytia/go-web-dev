@@ -80,7 +80,7 @@ type Writer interface {
 
 So this simply means that we're either able to *Read* or *Write* to files, which of course makes a lot of sense.
 
-## The http.ResponseWriter type
+## The http.ResponseWriter type
 
 We know that the ResponseWriter also implements the Writer interface, meaning, we can send an arbitrary array of bytes into it for writing
 
@@ -94,7 +94,7 @@ type ResponseWriter interface {
 
 So in fact, the *http.ResponseWriter* type implements the *Writer* interface.
 
-## Implementation
+## Implementation
 
 Ok then, based on the previous explanation we're able to *Read* and *Write* to files. Then comes the next piece of the puzzle. This would be how do we get the *File, that implements the *Read* interface, written as a reponse?
 
