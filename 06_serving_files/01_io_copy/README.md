@@ -120,3 +120,7 @@ func dogPic(w http.ResponseWriter, req *http.Request) {
 ```
 
 Then you can tie this handler to your *Mux*.
+
+--- 
+I wonder if this is the best implementation?
+--- 
