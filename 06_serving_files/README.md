@@ -18,6 +18,6 @@ File servers make storing, securing and sharing files in an organization simpler
 * A distributed file system can make the data redundant and highly available by copying it to multiple servers at different locations.
 
 
-## A note about this implementation
+## A note about this implementation
 
 Of course this very simple implenetation doesn't have all of the features of a file server implemented, but rather is meant to be an academic way of learning and understanding it's most basic implementation.
