@@ -1,4 +1,4 @@
-# Serving files using io.Copy
+# Serving files using io.Copy
 
 In the previous sessions we learned how to serve templates using the text/template and the html/template modules in Go. In this lesson, we're going to see how to serve files to clients using the io module (io.Copy).
 
