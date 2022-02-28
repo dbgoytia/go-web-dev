@@ -1,7 +1,7 @@
 # Serving files using a FileServer
 
 The FileServer function takes a root FileSystem to convert the FilseSystem to a Handler, so we're able to use it inside our *Mux*.
-It takes the root FileSystem to know where it will start serving files from. s
+It takes the root FileSystem to know where it will start serving files from.
 
 ```
 func FileServer(root FileSystem) Handler
