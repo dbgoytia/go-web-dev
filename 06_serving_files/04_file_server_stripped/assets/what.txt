@@ -1,0 +1,1 @@
+Hope you're learning a lot in Go <3
