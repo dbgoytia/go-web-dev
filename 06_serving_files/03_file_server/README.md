@@ -17,7 +17,7 @@ type FileSystem interface {
 }
 ```
 
-Thee implementation inside the net/http package is the [type http.Dir](https://pkg.go.dev/net/http#Dir), simply because
+The implementation inside the net/http package is the [type http.Dir](https://pkg.go.dev/net/http#Dir), simply because
 the type Dir implements all the methods of the FileSystem interface.
 
 ```
