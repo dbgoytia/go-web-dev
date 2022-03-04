@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscribe</title>
+</head>
+<body>
+
+<strong>Subscribe</strong><br>
+
+<form method="post">
+    
+    <label for="firstName">First Name</label>
+    <input type="text" name="first" id="firstName">
+    <br>
+
+    <label for="lastName">Last Name</label>
+    <input type="text" name="last">
+    <br>
+
+    <label for="sub">Subscribe?</label>
+    <input type="checkbox" id="sub" name="subscribe">
+    <br>    
+
+    <input type="submit">
+</form>
+
+<h1>First: {{.FirstName}}</h1>
+<h1>Last: {{.LastName}}</h1>
+<h1>Subscribed: {{.Subscribed}}</h1>
+
+</body>
+</html>
