@@ -21,26 +21,36 @@ func main() {
 }
 
 func upload(w http.ResponseWriter, req *http.Request) {
-	// how does v look like?
 
-	// open
-	f, h, err := req.FormFile("q")
-	HandleError(w, err)
+	var s string
 
-	defer f.Close()
+	if req.Method == http.MethodPost {
+		// open
+		f, h, err := req.FormFile("q")
+		HandleError(w, err)
+		defer f.Close()
 
-	// local debug
-	fmt.Println("\nfile:", f, "\nheader:", h, "\nerr", err)
+		// local debug
+		fmt.Println("\nfile:", f, "\nheader:", h, "\nerr", err)
 
-	// read
-	bs, err := ioutil.ReadAll(f)
-	HandleError(w, err)
+		// read
+		bs, err := ioutil.ReadAll(f)
+		HandleError(w, err)
 
-	s := string(bs)
+		s = string(bs)
+
+	}
 
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	err = tpl.ExecuteTemplate(w, "index.gohtml", s)
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	err := tpl.ExecuteTemplate(w, "index.gohtml", s)
 	HandleError(w, err)
+	// io.WriteString(w, `
+	// <form method="POST" enctype="multipart/form-data">
+	// <input type="file" name="q">
+	// <input type="submit">
+	// </form>
+	// <br>`+s)
 }
 
 func HandleError(w http.ResponseWriter, err error) {

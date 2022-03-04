@@ -8,10 +8,14 @@
 
 <strong>Upload</strong><br>
 
-<form method="post">
-    <input type="file" name="q" enctype="multipart/form-data">
-    <input type="submit">
+<form method="POST" enctype="multipart/form-data">
+	<input type="file" name="q">
+	<input type="submit">
 </form>
+
+<br>
+
+{{ . }}
 
 
 </body>
