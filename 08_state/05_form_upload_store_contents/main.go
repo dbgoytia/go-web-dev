@@ -6,6 +6,8 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
+	"path/filepath"
 )
 
 var tpl *template.Template
@@ -39,18 +41,19 @@ func upload(w http.ResponseWriter, req *http.Request) {
 
 		s = string(bs)
 
+		// store on server
+		dst, err := os.Create(filepath.Join("./user/", h.Filename))
+		HandleError(w, err)
+		defer dst.Close()
+
+		_, err = dst.Write(bs)
+		HandleError(w, err)
+
 	}
 
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	err := tpl.ExecuteTemplate(w, "index.gohtml", s)
 	HandleError(w, err)
-	// io.WriteString(w, `
-	// <form method="POST" enctype="multipart/form-data">
-	// <input type="file" name="q">
-	// <input type="submit">
-	// </form>
-	// <br>`+s)
 }
 
 func HandleError(w http.ResponseWriter, err error) {
