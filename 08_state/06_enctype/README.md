@@ -16,7 +16,3 @@ HTML:
 ```
 <input type="file">
 ```
-RENDERED HTML:
-
-<input type="file">
-
