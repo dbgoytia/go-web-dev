@@ -32,7 +32,7 @@ Run
     └── Fibonacci
 ```
 
-## Exporters
+## Exporters
 The SDK connects Telemetry from the OpenTelemetry API to exporters. Exporters are packages that allow telemetry data to be emitted somewhere - either to the console (which is what we’re doing here), or to a remote system or collector for further analysis and/or enrichment.
 
 Famous exporters include:
